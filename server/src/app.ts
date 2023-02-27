@@ -2,6 +2,12 @@ import express, { Application, Request, Response } from "express";
 import { Controller } from "../interfaces";
 import errorMiddleware from "../middlewares/error.middleware";
 // import { Controller } from "../controllers/Controller";
+import cors, { CorsOptions } from "cors";
+
+const clientPort = 3000;
+var corsOptions: CorsOptions = {
+  origin: `http://localhost/${clientPort}`,
+};
 
 class App {
   public app: Application;
@@ -18,8 +24,13 @@ class App {
 
   private initializeMiddlewares() {
     this.app.use(express.json());
+    this.app.use(cors());
+    this.app.use(
+      express.urlencoded({
+        extended: true,
+      })
+    );
   }
-
   private initializeErrorHandling() {
     this.app.use(errorMiddleware);
   }

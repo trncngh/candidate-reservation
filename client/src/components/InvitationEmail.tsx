@@ -1,0 +1,64 @@
+import { Close, Done } from "@mui/icons-material";
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Dialog,
+  DialogTitle,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/material";
+import dayjs from "dayjs";
+import React from "react";
+import { Meeting } from "../interfaces";
+import { getReadableLocalTime, getCurrentTimeZone } from "../utils";
+
+interface InvitationEmailProps {
+  isOpen: boolean;
+  meetingInfo: Meeting;
+  handleDialog: () => void;
+}
+
+const InvitationEmail = ({
+  isOpen,
+  meetingInfo,
+  handleDialog,
+}: InvitationEmailProps) => {
+  return (
+    <Dialog open={isOpen} fullWidth={true} maxWidth="xs">
+      <Stack>
+        <DialogTitle sx={{ m: 0, p: 2, padding: (theme) => theme.spacing(2) }}>
+          Meeting infomation
+          <IconButton
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500],
+            }}
+            onClick={() => {
+              handleDialog();
+            }}
+          >
+            <Close />
+          </IconButton>
+        </DialogTitle>
+      </Stack>
+      <Stack
+        component="form"
+        id="confirm-meeting"
+        // onSubmit={handleSubmit}
+        spacing={2}
+        sx={{ padding: 2 }}
+      >
+        <Typography>
+          An invitation email has been sent to candidate{" "}
+          {meetingInfo.candidate.name}. <br />
+          Meeting reservation link: http://localhost:3000/?id={meetingInfo.id}
+        </Typography>
+      </Stack>
+    </Dialog>
+  );
+};
+
+export default InvitationEmail;

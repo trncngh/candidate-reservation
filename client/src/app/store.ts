@@ -1,9 +1,11 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import adminReducer from "../features/admin/adminSlice";
+import meetingReservationReducer from "../features/home/meetingReservationSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    admin: adminReducer,
+    meetingReservation: meetingReservationReducer,
   },
 });
 
