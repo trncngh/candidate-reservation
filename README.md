@@ -35,8 +35,9 @@ This project is live at [Meeting Reservation](https://urlgoesthere/).
    - Confirm a valid meeting time.
 
 3. Create a UI interface and integrate it with the API.
+![Wireframe](https://user-images.githubusercontent.com/2673600/221740304-65f3f248-0209-49c1-9af8-5c80522914bc.png)
 
-<img width="1000" alt="wireframe" src="https://user-images.githubusercontent.com/2673600/217283638-fc9ab80c-cabf-487d-9a57-4d0e3038e9a4.png">
+
 - All features must be implemented correctly.
 - Most of data (user's balance, item's price, remaining time...) must be updated in real time.
 
