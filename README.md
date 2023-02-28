@@ -42,11 +42,11 @@ This project is live at [Meeting Reservation](https://urlgoesthere/).
 
 ### 3. Data flows
 
-![DFD](dataflow)
+![DFD](https://user-images.githubusercontent.com/2673600/221740032-4449522b-923f-4d8b-bbfe-60b31447a7e2.png)
 
 ### 4. Modeling Data Structure
 
-![Models](Model)
+![Models](https://user-images.githubusercontent.com/2673600/221740147-d64a4320-2195-4af5-829b-5d039a73f001.png)
 
 ## II. Setup and running on local with your own database
 
