@@ -1,7 +1,6 @@
 import MuiAlert, { AlertColor, AlertProps } from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import React, { useEffect, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,

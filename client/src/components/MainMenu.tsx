@@ -1,9 +1,6 @@
 import { AppBar, Typography } from "@mui/material";
-import React from "react";
 
-interface MainMenuProps {}
-
-const MainMenu = ({}: MainMenuProps) => {
+const MainMenu = () => {
   return (
     <AppBar sx={{ marginBottom: 20 }}>
       <Typography>Meeting Reservation</Typography>

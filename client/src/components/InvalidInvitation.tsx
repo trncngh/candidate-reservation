@@ -1,8 +1,4 @@
-import React from "react";
-
-interface InvalidInvitationProps {}
-
-const InvalidInvitation = ({}: InvalidInvitationProps) => {
+const InvalidInvitation = () => {
   return <>Invalid invitation</>;
 };
 

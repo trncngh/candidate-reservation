@@ -1,22 +1,16 @@
 import { Close, Done } from "@mui/icons-material";
 import {
-  Dialog,
-  Stack,
-  DialogTitle,
-  IconButton,
-  TextField,
   BottomNavigation,
   BottomNavigationAction,
+  Dialog,
+  DialogTitle,
+  IconButton,
+  Stack,
   Typography,
 } from "@mui/material";
-import dayjs, { Dayjs } from "dayjs";
-import React, { FormEvent } from "react";
-import { initialCandidate } from "../interfaces";
-import {
-  getCurrentTimeZone,
-  getLocalDateTime,
-  getReadableLocalTime,
-} from "../utils";
+import dayjs from "dayjs";
+import { FormEvent } from "react";
+import { getCurrentTimeZone, getReadableLocalTime } from "../utils";
 
 interface ConfirmationScreenProps {
   isOpen: boolean;

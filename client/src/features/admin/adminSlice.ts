@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState, AppThunk } from "../../app/store";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../app/store";
 import { Candidate, Meeting } from "../../interfaces";
 import AdminDataService from "../../services/admin.services";
 
@@ -101,6 +101,7 @@ export const adminSlice = createSlice({
           if (item.id === action.payload.id) {
             item.isSent = true;
           }
+          return item; // need to check
         });
         state.isLoading = false;
         state.hasError = false;
@@ -111,8 +112,6 @@ export const adminSlice = createSlice({
       });
   },
 });
-
-export const {} = adminSlice.actions;
 
 export const selectAdmin = (state: RootState) => state.admin;
 export const selectMeetingList = (state: RootState) => {

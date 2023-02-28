@@ -1,14 +1,7 @@
+import { Dayjs } from "dayjs";
 import { useState } from "react";
-import dayjs, { Dayjs } from "dayjs";
 
-import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import {
-  BottomNavigation,
-  BottomNavigationAction,
   Button,
   FormControl,
   InputLabel,
@@ -17,10 +10,14 @@ import {
   SelectChangeEvent,
   Typography,
 } from "@mui/material";
-import { Done, Close } from "@mui/icons-material";
-import { initialCandidate, Meeting } from "../../interfaces";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import ConfirmationScreen from "../../components/ConfirmationScreen";
 import CustomizedAlert from "../../components/CustomizedAlert";
+import { Meeting } from "../../interfaces";
 
 interface MaterialDatePickerProps {
   meetingInfo: Meeting;

@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/system";
 import { useEffect, useState } from "react";
@@ -14,15 +14,13 @@ import {
 } from "./adminSlice";
 import MeetingList from "./MeetingList";
 
-interface AdminProps {}
-
-const Admin = ({}: AdminProps) => {
+const Admin = () => {
   const [openDialog, setOpenDialog] = useState<boolean>(false);
   const dispatch = useAppDispatch();
   const meetingList = useAppSelector(selectMeetingList);
   useEffect(() => {
     dispatch(loadMeetingList());
-  }, []);
+  }, [dispatch]);
 
   const handleCreateMeeting = (candidate: Candidate) => {
     console.log(candidate);

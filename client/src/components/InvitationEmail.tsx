@@ -1,17 +1,12 @@
-import { Close, Done } from "@mui/icons-material";
+import { Close } from "@mui/icons-material";
 import {
-  BottomNavigation,
-  BottomNavigationAction,
   Dialog,
   DialogTitle,
   IconButton,
   Stack,
   Typography,
 } from "@mui/material";
-import dayjs from "dayjs";
-import React from "react";
 import { Meeting } from "../interfaces";
-import { getReadableLocalTime, getCurrentTimeZone } from "../utils";
 
 interface InvitationEmailProps {
   isOpen: boolean;

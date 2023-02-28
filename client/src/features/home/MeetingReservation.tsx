@@ -1,28 +1,22 @@
 import { Container } from "@mui/material";
-import dayjs, { Dayjs } from "dayjs";
-import React, { useEffect } from "react";
+import { Dayjs } from "dayjs";
+import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import CustomizedAlert from "../../components/CustomizedAlert";
 import InvalidInvitation from "../../components/InvalidInvitation";
+import MainMenu from "../../components/MainMenu";
+import ThankYou from "../../components/ThankYou";
 import { Meeting } from "../../interfaces";
-import { convertToUTCTime } from "../../utils";
+import MaterialDatePicker from "./MaterialDatePicker";
 import {
   confirmMeeting,
   getAllMeetingsByDate,
-  selectCurrentMeetingSlots,
-} from "./meetingReservationSlice";
-import MaterialDatePicker from "./MaterialDatePicker";
-import {
   getCurrentMeetingInfo,
+  selectCurrentMeetingSlots,
   selectMeetingReservationInfo,
 } from "./meetingReservationSlice";
-import ThankYou from "../../components/ThankYou";
-import MainMenu from "../../components/MainMenu";
 
-interface MeetingReservationProps {}
-
-const MeetingReservation = ({}: MeetingReservationProps) => {
+const MeetingReservation = () => {
   const meetingInfo = useAppSelector(selectMeetingReservationInfo);
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -56,14 +50,13 @@ const MeetingReservation = ({}: MeetingReservationProps) => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     const id = searchParams.get("id");
-    const currentDate = dayjs();
 
     if (typeof id === "string") {
       dispatch(getCurrentMeetingInfo(id));
-      // dispatch(getMeetingsByDay(currentDate.toJSON()));
-      // handleGetMeetingsByDate(currentDate.format("YYYY-MM-DD"));
+    } else {
+      setSearchParams("");
     }
-  }, [searchParams]);
+  }, [dispatch, searchParams, setSearchParams]);
 
   return (
     <Container sx={{ pt: 4 }}>

@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import { Button, Switch, Table } from "@mui/material";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { initialMeeting, Meeting } from "../../interfaces";
-import { Button, Switch, Table } from "@mui/material";
-import { convertToLocalTime } from "../../utils";
 import { Container } from "@mui/system";
+import { useState } from "react";
 import InvitationEmail from "../../components/InvitationEmail";
+import { initialMeeting, Meeting } from "../../interfaces";
+import { convertToLocalTime } from "../../utils";
 
 interface MeetingListProps {
   meetingList: Meeting[];

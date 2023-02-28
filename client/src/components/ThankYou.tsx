@@ -1,9 +1,8 @@
 import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import dayjs from "dayjs";
-import React from "react";
 import { Meeting } from "../interfaces";
-import { convertToLocalTime, getReadableLocalTime } from "../utils";
+import { getReadableLocalTime } from "../utils";
 
 interface ThankYouProps {
   meetingInfo: Meeting;
