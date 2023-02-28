@@ -50,35 +50,49 @@ This project is live at [Meeting Reservation](https://urlgoesthere/).
 
 ## II. Setup and running on local with your own database
 
-Requirement: Nodejs and Git is installed on local PC.
+Requirement: Nodejs, yarn and Git is installed on local PC.
 
 ### 1. Get source code and install neccessary dependencies
 
 Clone the newest source code:
 
-### `git clone `
+### `git clone https://github.com/trncngh/candidate-reservation.git`
 
-Go to project folder, install all dependencies using nodes.
+Go to project folders(client/server), install all dependencies using nodes.
 
-### `npm i ci`
+### `yarn add i ci`
 
-### 2. Set up real time database using Firebase
+### 2. Set up PostgreSQL database
 
-[Setup realtime database.pdf](https://github.com/trncngh/jitera-assignment/files/10673038/Setup.realtime.database.pdf)
+[Download and install PostgreSQL](https://www.postgresql.org/download/)
+
+Create new env file at /server/.env then change DATABASE_URL variable:
+
+DATABASE_URL="postgresql://[username]:[password]@[host:port]/candidates-reservation?schema=public"
+[host:password] by default is "localhost:5432"
 
 ### 3. Running - Testing - Building
 
-In the project directory, you can run:
+In the server directory, you can run:
 
-### `npm start`
+### `yarn run dev`
+
+You can also run the Prisma studio on server by
+
+### `yarn prisma studio`
+
+In the client directory, you can run:
+
+### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+Open [http://localhost:3000/admin](http://localhost:3000/admin) to start with HR feature.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+<!-- ### `npm test`
 
 Launches the test runner in the interactive watch mode.
 
@@ -88,4 +102,4 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Your app is ready to be deployed! -->
