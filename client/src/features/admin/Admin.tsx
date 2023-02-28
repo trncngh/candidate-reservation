@@ -1,4 +1,3 @@
-import { Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/system";
 import { useEffect, useState } from "react";
@@ -36,21 +35,19 @@ const Admin = () => {
 
   return (
     <Container sx={{ mt: 4 }}>
-      <Stack>
-        <MainMenu />
-        <Button variant="contained" color="success" onClick={handleDialog}>
-          Create new Meeting
-        </Button>
-        <MeetingList
-          meetingList={meetingList}
-          handleSendInvitation={handleSendIvitation}
-        />
-        <NewMeeting
-          isOpen={openDialog}
-          handleDialog={handleDialog}
-          handleCreateMeeting={handleCreateMeeting}
-        />
-      </Stack>
+      <MainMenu />
+      <Button variant="contained" color="success" onClick={handleDialog}>
+        Create new Meeting
+      </Button>
+      <MeetingList
+        meetingList={meetingList}
+        handleSendInvitation={handleSendIvitation}
+      />
+      <NewMeeting
+        isOpen={openDialog}
+        handleDialog={handleDialog}
+        handleCreateMeeting={handleCreateMeeting}
+      />
     </Container>
   );
 };

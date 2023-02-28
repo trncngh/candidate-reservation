@@ -61,7 +61,9 @@ const MeetingReservation = () => {
   return (
     <Container sx={{ pt: 4 }}>
       <MainMenu />
-      {meetingInfo.id.length === 0 || meetingInfo.isSent === false ? (
+      {!meetingInfo ||
+      meetingInfo.id.length === 0 ||
+      meetingInfo.isSent === false ? (
         <InvalidInvitation />
       ) : meetingInfo.isConfirmed ? (
         <ThankYou meetingInfo={meetingInfo} />
