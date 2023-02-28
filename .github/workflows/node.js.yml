@@ -22,4 +22,4 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: pwd && yarn --cwd /client ci &&  yarn --cwd /server ci
+      - run: yarn --cwd "./client" add ci &&  yarn --cwd "./server" add ci
