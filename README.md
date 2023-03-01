@@ -5,14 +5,15 @@ This project is live at [Meeting Reservation](https://urlgoesthere/).
 ## Contents
 
 - [I. Software Architechture](#i-software-architechture)
+
   - [1. Specifications](#1-specifications)
   - [2. Requirements](#2-requirement)
   - [3. Data flows](#3-data-flows)
-  - [4. Logical flows](#4-modeling-data-structures)
+
 - [II. Set up and running on local with your own database](#ii-setup-and-running-on-local-with-your-own-database)
 
   - [1. Get source code and install neccessary dependencies](#1-get-source-code-and-install-neccessary-dependencies)
-  - [2. Set up real time database using Firebase](#2-set-up-real-time-database-using-firebase)
+  - [2. Set up PostgreSQL database](#2-set-up-postgresql-database)
   - [3. Running - Testing - Building](#3-running---testing---building)
 
   ## I. Software Architechture
@@ -28,18 +29,16 @@ This project is live at [Meeting Reservation](https://urlgoesthere/).
 ### 2. Requirement
 
 1. HR
-   - Create a new meeting invitation.
+   - Create a new meeting invitation with unique id.
    - (Send an email to candidate)
 2. Candidate
 
    - Confirm a valid meeting time.
 
 3. Create a UI interface and integrate it with the API.
-![Wireframe](https://user-images.githubusercontent.com/2673600/221740304-65f3f248-0209-49c1-9af8-5c80522914bc.png)
-
+   ![Wireframe](https://user-images.githubusercontent.com/2673600/221740304-65f3f248-0209-49c1-9af8-5c80522914bc.png)
 
 - All features must be implemented correctly.
-- Most of data (user's balance, item's price, remaining time...) must be updated in real time.
 
 ### 3. Data flows
 
@@ -93,14 +92,14 @@ Open [http://localhost:3000/admin](http://localhost:3000/admin) to start with HR
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-<!-- ### `npm test`
+### `yarn run test`
 
 Launches the test runner in the interactive watch mode.
 
-### `npm run build`
+### `yarn run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed! -->
+Your app is ready to be deployed!
