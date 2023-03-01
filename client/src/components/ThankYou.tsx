@@ -13,7 +13,7 @@ const ThankYou = ({ meetingInfo }: ThankYouProps) => {
     <Container>
       <Typography>
         Hi <b>{meetingInfo.candidate.name}</b>
-        , thank your for getting in touch with us! <br /> Your meeting is
+        , thank you for getting in touch with us! <br /> Your meeting is
         scheduled at <b>{getReadableLocalTime(dayjs(meetingInfo.dateTime))}</b>
         . <br /> See you there.
       </Typography>

@@ -1,6 +1,7 @@
 # Meeting reservation
 
-This project is live at [Meeting Reservation](https://urlgoesthere/).
+This project is live at [Meeting Reservation](http://ec2-54-179-126-97.ap-southeast-1.compute.amazonaws.com/admin).
+Please using Firefox due to cors policy (chromium based webrowser won't work), I'm working on it :)
 
 ## Contents
 
