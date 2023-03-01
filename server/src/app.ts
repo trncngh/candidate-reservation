@@ -6,7 +6,8 @@ import cors, { CorsOptions } from "cors";
 
 const clientPort = 3000;
 var corsOptions: CorsOptions = {
-  origin: `http://localhost/${clientPort}`,
+  // origin: `http://localhost/${clientPort}`,
+  origin: "*",
 };
 
 class App {
