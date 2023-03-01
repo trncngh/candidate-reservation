@@ -71,6 +71,10 @@ Create new env file at /server/.env then change DATABASE_URL variable:
 DATABASE_URL="postgresql://[username]:[password]@[host:port]/candidates-reservation?schema=public"
 [host:password] by default is "localhost:5432"
 
+Local to server folder ('./serve) and init first migration
+
+### `yarn prisma migrate dev --name init"
+
 ### 3. Running - Testing - Building
 
 In the server directory, you can run:

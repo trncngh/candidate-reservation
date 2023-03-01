@@ -1,8 +1,6 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
 import ROUTES from "./app/ROUTES";
 import Admin from "./features/admin/Admin";
 import MeetingReversation from "./features/home/MeetingReservation";

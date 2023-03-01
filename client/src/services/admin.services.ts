@@ -29,5 +29,5 @@ class AdminDataService {
     return http.post(`/meeting/confirm`, data);
   }
 }
-
+/* eslint import/no-anonymous-default-export: [2, {"allowNew": true}] */
 export default new AdminDataService();

@@ -1,6 +1,6 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { Dayjs } from "dayjs";
-import { RootState, AppThunk } from "../../app/store";
+import { RootState } from "../../app/store";
 import { ConfirmedMeeting, Meeting } from "../../interfaces";
 import AdminDataService from "../../services/admin.services";
 
@@ -85,10 +85,6 @@ export const meetingReservationSlice = createSlice({
         state.hasError = false;
       })
       .addCase(getCurrentMeetingInfo.fulfilled, (state, action) => {
-        // state.meetingInfo.id = action.payload.id || "";
-        // state.meetingInfo.dateTime = action.payload.dateTime || null;
-        // state.meetingInfo.isConfirmed = action.payload.isConfirmed;
-        // state.meetingInfo.isSent = action.payload.isSent;
         state.meetingInfo = action.payload;
         state.isLoading = false;
         state.hasError = false;
@@ -127,7 +123,7 @@ export const meetingReservationSlice = createSlice({
   },
 });
 
-export const {} = meetingReservationSlice.actions;
+// export const {} = meetingReservationSlice.actions;
 
 export const selectMeetingReservationInfo = (state: RootState) =>
   state.meetingReservation.meetingInfo;
