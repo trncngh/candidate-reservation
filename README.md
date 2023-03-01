@@ -1,7 +1,7 @@
 # Meeting reservation
 
 This project is live at [Meeting Reservation](http://ec2-54-179-126-97.ap-southeast-1.compute.amazonaws.com/admin).
-Please using Firefox due to cors policy (chromium based webrowser won't work), I'm working on it :)
+Please using Firefox/Chrome due to cors policy problems (Brave won't work), I'm still working on it :)
 
 ## Contents
 
@@ -36,7 +36,9 @@ Please using Firefox due to cors policy (chromium based webrowser won't work), I
 
    - Confirm a valid meeting time.
 
-3. Create a UI interface and integrate it with the API.
+3. Time must be shown as local time and stored as UTC time.
+
+4. Create a UI interface and integrate it with the API.
    ![Wireframe](https://user-images.githubusercontent.com/2673600/221740304-65f3f248-0209-49c1-9af8-5c80522914bc.png)
 
 - All features must be implemented correctly.
@@ -74,7 +76,7 @@ DATABASE_URL="postgresql://[username]:[password]@[host:port]/candidates-reservat
 
 Local to server folder ('./serve) and init first migration
 
-### `yarn prisma migrate dev --name init"
+### `yarn prisma migrate dev --name init`
 
 ### 3. Running - Testing - Building
 

@@ -32,9 +32,6 @@ const MaterialDatePicker = ({
   handleGetMeetingByDate,
   handleConfirmMeeting,
 }: MaterialDatePickerProps) => {
-  // const currentHour = dayjs().hour();
-  // const currentDate = dayjs().date();
-  // // console.log(currentHour, currentDate);
   const availableHour = ["13", "14", "15", "16"];
   const [openDialog, setOpenDialog] = useState<boolean>(false);
   const [date, setDate] = useState<Dayjs | null>(null);
@@ -52,7 +49,6 @@ const MaterialDatePicker = ({
     if (date !== null) {
       setDate(date.set("hour", parseInt(event.target.value)));
       setTime(event.target.value);
-      console.log(date);
     }
   };
 
@@ -61,7 +57,6 @@ const MaterialDatePicker = ({
   };
 
   const handleDialog = () => {
-    console.log(date);
     if (date === null) {
       setMessage("Please select date");
       setTimeout(() => {

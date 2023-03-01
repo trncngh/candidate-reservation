@@ -26,5 +26,3 @@ export const getReadableLocalTime = (dateTime: Dayjs | null): string => {
     .format("MMM/DD/YYYY - HH:mm [GMT]Z")
     .toString();
 };
-
-// console.log(dayjs.tz.guess());

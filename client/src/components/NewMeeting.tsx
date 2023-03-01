@@ -26,7 +26,6 @@ const NewMeeting = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(candidate);
     handleCreateMeeting(candidate);
     handleDialog();
   };

@@ -16,11 +16,9 @@ interface CustomizedAlertProps {
 const CustomizedAlert = ({ message }: CustomizedAlertProps) => {
   const [open, setOpen] = useState<boolean>(false);
   const [severity, setServerity] = useState<AlertColor | undefined>("error");
-  //   const [message, setMessage] = useState<string>("");
 
   useEffect(() => {
     setServerity("error");
-    // setMessage("User not found");
     setOpen(true);
   }, [message]);
 

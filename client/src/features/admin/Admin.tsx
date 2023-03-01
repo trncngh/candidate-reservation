@@ -22,7 +22,6 @@ const Admin = () => {
   }, [dispatch]);
 
   const handleCreateMeeting = (candidate: Candidate) => {
-    console.log(candidate);
     dispatch(createNewMeeting(candidate));
   };
 

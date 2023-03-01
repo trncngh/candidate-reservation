@@ -23,14 +23,11 @@ const MeetingReservation = () => {
   const busySlots = useAppSelector(selectCurrentMeetingSlots).map(
     (item: Meeting) => {
       const time = new Date(item.dateTime).getHours();
-      console.log(time);
-      console.log(item.dateTime);
       return time.toString();
     }
   );
 
   const handleGetMeetingsByDate = (date: Dayjs | null) => {
-    console.log(date);
     if (!!date) {
       dispatch(getAllMeetingsByDate(date));
     }

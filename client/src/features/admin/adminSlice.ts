@@ -20,7 +20,6 @@ export const loadMeetingList = createAsyncThunk(
   async () => {
     const res = await AdminDataService.getAll()
       .then((result) => {
-        console.log(result);
         return result.data;
       })
       .catch((error) => {
@@ -35,7 +34,6 @@ export const createNewMeeting = createAsyncThunk(
   async (candidate: Candidate) => {
     const res = await AdminDataService.createMeeting(candidate)
       .then((result) => {
-        console.log(result);
         return result.data;
       })
       .catch((error) => {
@@ -50,7 +48,6 @@ export const sendInvitation = createAsyncThunk(
   async (id: string) => {
     const res = await AdminDataService.sendInvitation(id)
       .then((result) => {
-        console.log(result);
         return result.data;
       })
       .catch((error) => {

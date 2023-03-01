@@ -24,7 +24,6 @@ export default class MeetingController extends Controller {
 
   bookMeeting = async (req: Request, res: Response) => {
     const id = req.body.id;
-    console.log(req.body);
     await prisma.meeting
       .update({
         where: {
@@ -130,7 +129,6 @@ export default class MeetingController extends Controller {
   getAllBookedMeetingsByDate = async (req: Request, res: Response) => {
     const selectedDate = dayjs(req.body.dateTime);
     const nextDate = selectedDate.add(1, "day");
-    console.log(req.body, selectedDate.toISOString(), nextDate.toISOString()); // ??? why it doesnt work?
     // const nextDate = new Date(selectedDate.setDate(selectedDate.getDate() + 1));
     await prisma.meeting
       .findMany({
@@ -143,7 +141,6 @@ export default class MeetingController extends Controller {
         },
       })
       .then((result) => {
-        console.log(result);
         res.status(200).send(result);
       })
       .catch((error) => {

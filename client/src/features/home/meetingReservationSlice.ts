@@ -9,7 +9,6 @@ export const getCurrentMeetingInfo = createAsyncThunk(
   async (id: string) => {
     const res = AdminDataService.getCurrentMeetingInfo(id)
       .then((result) => {
-        console.log(result.data);
         return result.data;
       })
       .catch((error) => {
@@ -24,7 +23,6 @@ export const confirmMeeting = createAsyncThunk(
   async (data: ConfirmedMeeting) => {
     const res = AdminDataService.confirmMeeting(data)
       .then((result) => {
-        console.log(result.data);
         return result.data;
       })
       .catch((error) => {
@@ -37,7 +35,6 @@ export const confirmMeeting = createAsyncThunk(
 export const getAllMeetingsByDate = createAsyncThunk(
   "meetingReservation/getAllMeetingsByDate",
   async (date: Dayjs) => {
-    console.log(date);
     const res = await AdminDataService.getBookedMeetings(date.toISOString())
       .then((result) => {
         return result.data;

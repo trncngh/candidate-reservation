@@ -42,7 +42,6 @@ const InvitationEmail = ({
       <Stack
         component="form"
         id="confirm-meeting"
-        // onSubmit={handleSubmit}
         spacing={2}
         sx={{ padding: 2 }}
       >
