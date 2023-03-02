@@ -45,7 +45,8 @@ const MeetingList = ({
             </TableRow>
           </TableHead>
           <TableBody>
-            {meetingList.length > 0 &&
+            {!!meetingList &&
+              meetingList.length > 0 &&
               meetingList.map((item: Meeting, index: number) => {
                 return (
                   <TableRow key={`row-${index}`}>
