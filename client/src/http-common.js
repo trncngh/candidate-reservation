@@ -3,7 +3,7 @@ import axios from "axios";
 export default axios.create({
   // baseURL: "http://localhost:3084/api",
   baseURL:
-    "http://ec2-54-179-126-97.ap-southeast-1.compute.amazonaws.com:3084/api",
+    "https://ec2-54-179-126-97.ap-southeast-1.compute.amazonaws.com:3084/api",
   headers: {
     "Content-type": "application/json",
     "Access-Control-Allow-Origin": "*",
