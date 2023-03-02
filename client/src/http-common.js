@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://ec2-54-179-126-97.ap-southeast-1.compute.amazonaws.com",
+  baseURL:
+    "http://ec2-54-179-126-97.ap-southeast-1.compute.amazonaws.com:3084/api",
   // baseURL: "http://172.31.41.65:3084/api",
   // baseURL: "http://localhost:3084/api",
   headers: {
